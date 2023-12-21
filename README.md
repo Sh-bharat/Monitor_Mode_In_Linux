@@ -1,4 +1,3 @@
-
 ---
 
 # Monitor Mode Script (monitormode.sh)
@@ -31,11 +30,40 @@ This script facilitates the activation and deactivation of monitor mode for a wi
      - `Stop Monitor Mode`: Deactivates monitor mode for the specified wireless interface.
      - `Exit`: Quits the script.
 
+## Wi-Fi Not Showing After Monitor Mode Turnoff
+
+### Solution
+After turning off monitor mode, if Wi-Fi networks are not visible or connectable, follow these steps:
+
+1. Restart the NetworkManager service using the appropriate command for your Linux distribution:
+   
+   #### Ubuntu, Debian, and other distributions using systemd:
+
+   ```bash
+   sudo systemctl restart NetworkManager
+   ```
+   
+   #### CentOS 7 and older versions using systemctl:
+
+   ```bash
+   sudo systemctl restart NetworkManager
+   ```
+
+   ... (Check the commands for various distributions on Google, of how to restart network manager in [your OS name])
+
+2. After applying the command, **restart your system** to ensure the changes take effect completely:
+
+   ```bash
+   sudo reboot
+   ```
+
 ## Usage
-- Use this script to conveniently toggle monitor mode on a wireless interface for network monitoring and analysis.
+- Use the provided script to toggle monitor mode on a wireless interface.
+- If encountering Wi-Fi visibility issues post turning off monitor mode, follow the solution steps mentioned above.
 
 ## Notes
+- Always use this script responsibly and in compliance with local laws and regulations.
 - Ensure the correct wireless interface name is provided to avoid errors during mode toggling.
-- Always use this script responsibly and in compliance with local laws and regulations regarding network monitoring and security.
+- Additional restart of the system may be required to resolve Wi-Fi visibility issues after turning off monitor mode.
 
 ---
