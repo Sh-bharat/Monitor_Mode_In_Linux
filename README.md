@@ -21,6 +21,7 @@ This script facilitates the activation and deactivation of monitor mode for a wi
 2. **Execution:**
    - Run the script using the command:
      ```bash
+     chmod +x monitormode.sh
      ./monitormode.sh
      ```
 3. **Script Actions:**
